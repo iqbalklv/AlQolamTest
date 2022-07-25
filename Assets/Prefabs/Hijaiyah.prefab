@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 5316300287757911910}
   - component: {fileID: 5316300287757911909}
   - component: {fileID: 8479808392893564582}
+  - component: {fileID: 955365723849220545}
+  - component: {fileID: 6983825847302062213}
   m_Layer: 0
   m_Name: Hijaiyah
-  m_TagString: Untagged
+  m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5316300287757911908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.9827, y: -4, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.3}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d997fb158ac41f587d7130f82030f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectType: 1
   speed: 1
+  isFlipable: 0
   sprites:
   - {fileID: 21300000, guid: b9537ed8eac29455283b48320d70f413, type: 3}
   - {fileID: 21300000, guid: 37d1bc4fbb1df4d9ba73d0950c5284c9, type: 3}
@@ -128,3 +130,34 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d5084087b4d064396ad1fe0b0e666373, type: 3}
   - {fileID: 21300000, guid: e7228309433d044f2af5c913f8eb2786, type: 3}
   - {fileID: 21300000, guid: 41dd629009f0348c584faec89878b5b6, type: 3}
+--- !u!58 &955365723849220545
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5316300287757911908}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.017591316}
+  serializedVersion: 2
+  m_Radius: 4.454664
+--- !u!114 &6983825847302062213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5316300287757911908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11445607d286e4ae98141346ffe670a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 100
+  scoreGained: {fileID: 11400000, guid: c0d54784759ee4c2fa3bca473fce8866, type: 2}
+  onScoreGained: {fileID: 11400000, guid: 40217db3ff6464a67830bce35816fff9, type: 2}

@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6660381649716141810}
   - component: {fileID: 6660381649716141809}
   - component: {fileID: 6919626816589029170}
+  - component: {fileID: 84823956799751612}
+  - component: {fileID: 2753369615238935331}
   m_Layer: 0
   m_Name: Fish
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d997fb158ac41f587d7130f82030f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectType: 0
   speed: 2
   isFlipable: 1
   sprites:
@@ -105,3 +106,34 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b1a1e6cc73dce46f9a195bc96cb4adeb, type: 3}
   - {fileID: 21300000, guid: 0568393d446a741f196f1860b3eb0226, type: 3}
   - {fileID: 21300000, guid: ac2058f6713934951bb97fadad079256, type: 3}
+--- !u!70 &84823956799751612
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6660381649716141808}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.19372755, y: 0.58126295}
+  m_Size: {x: 5.1992164, y: 2.6675823}
+  m_Direction: 1
+--- !u!114 &2753369615238935331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6660381649716141808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11445607d286e4ae98141346ffe670a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: -100
+  scoreGained: {fileID: 11400000, guid: c0d54784759ee4c2fa3bca473fce8866, type: 2}
+  onScoreGained: {fileID: 11400000, guid: 40217db3ff6464a67830bce35816fff9, type: 2}

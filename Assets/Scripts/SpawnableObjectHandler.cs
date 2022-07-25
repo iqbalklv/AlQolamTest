@@ -57,7 +57,17 @@ public class SpawnableObjectHandler : MonoBehaviour
         spawnCancellation = new CancellationTokenSource();
         float hijaiyahSpawnDelay = LevelHandler.MaxDuration / _hijaiyahCount;
 
-        HandleObjectSpawn(fishObjectPool, () => { return Random.Range(hijaiyahSpawnDelay/2, hijaiyahSpawnDelay); }, fishPrefab.gameObject);
+        foreach(GameObject obj in fishObjectPool)
+        {
+            obj.SetActive(false);
+        }
+
+        foreach (GameObject obj in hijaiyahObjectPool)
+        {
+            obj.SetActive(false);
+        }
+
+        HandleObjectSpawn(fishObjectPool, () => { return Random.Range(hijaiyahSpawnDelay/3, hijaiyahSpawnDelay/2); }, fishPrefab.gameObject);
         HandleObjectSpawn(hijaiyahObjectPool, () => { return hijaiyahSpawnDelay; }, hijaiyahPrefab.gameObject);
     }
 
@@ -84,7 +94,7 @@ public class SpawnableObjectHandler : MonoBehaviour
                 await Task.Delay(TimeSpan.FromSeconds(delay()), cancellationToken: spawnCancellation.Token);
             }
         }
-        finally
+        catch(Exception)
         {
             if(spawnCancellation != null)
             {
